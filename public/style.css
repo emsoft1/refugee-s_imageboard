@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+}
+body {
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.junbo {
+    font-family: "MuseoModerno", serif;
+    font-size: 5rem;
+    color: #393e46;
+
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+    -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1)
+        both;
+    animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+#form {
+}
+#imgcom {
+    width: 70%;
+    height: 50%;
+    transition: transform 0.2s; /* Animation */
+}
+#imgcom:hover {
+    transform: scale(
+        2.5
+    ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+#pics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+input {
+    margin: 10px;
+}
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#imgbox {
+    height: 340px;
+    width: 300px;
+    overflow: hidden;
+    border-style: groove;
+    border-color: black;
+    border-width: 2px;
+    margin: 10px;
+    background-color: #222831;
+}
+img {
+    height: 100%;
+}
+#imgsec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+.fruit {
+    font-size: 30px;
+}
+.component {
+    background-color: #222831;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: left; */
+    /* flex-direction: column; */
+}
+#picdivcpm {
+    display: flex;
+    position: relative;
+    top: 200px;
+    left: 300px;
+    /* align-items: center; */
+    justify-content: left;
+    flex-direction: column;
+}
+.dinincom {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+#x {
+    font-family: "MuseoModerno", serif;
+    color: #32e0c4;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+#maincom {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h2,
+h3,
+h4,
+p {
+    margin: 10px;
+    font-family: "MuseoModerno", serif;
+    color: #32e0c4;
+}
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before,
+.inanim {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}

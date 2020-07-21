@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <title>One No One</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=MuseoModerno">
+</head>
+<body>
+    <h1 class="junbo">One No One</h1>
+    <h2>What happen in kale</h2>
+    <div id="main">
+        <div id="form">
+<form action="" >
+   
+        <input v-model='title' type="text" name="title" id="inp" placeholder="title"class="glow-on-hover " >
+
+    <input v-model='dis' type="text" name="dis" id="dis" placeholder="disccription"class="glow-on-hover ">
+    <input v-model='username' type="text" name="username" placeholder="user name" class="glow-on-hover">
+    <input @change="handlechange" type="file" name="file" id="" accept="image/*" class="glow-on-hover">
+ 
+    <button @click='handleClick'class="glow-on-hover">submit</button>
+
+
+</form>
+</div>
+       
+<first_comp v-if="imageId" 
+title="hello vanill" :idf="imageId" :f="imgs" @close="closemodo">
+</first_comp>
+<!-- <first_comp></first_comp>
+<first_comp></first_comp> -->
+<div id="pics">
+
+   
+        <div id="imgbox" v-for="imgg in imgs">
+             <a :href="'#' + imgg.id">
+            <h4>{{imgg.username}}</h4><div id="imgsec"><img :src='imgg.url' alt=""></div><h3>{{imgg.title}}</h3>
+        </a>
+        </div>
+    </div>
+    </div>
+    <script type="text/x-template" id="template">
+    
+        <div class="component">
+        <h1 id="x" @click="closemodo">  X</h1>
+            <div id="picdivcpm">
+                <h1>{{f.find(x=>x.id===idf-1+1).title}}</h1>
+                <img :src='f.find(x=>x.id===idf-1+1).url' alt="" id="imgcom">
+            </div>
+
+
+            <div id="maincom">
+                <input v-model='username' type="text" name="username" placeholder="user name" class="glow-on-hover">
+                <input v-model='com' type="text" name="comments" placeholder="comments" class="glow-on-hover">
+                <button @click='handleClickc'class="glow-on-hover">submit</button>
+
+                <div class="dinincom" v-for="comm in coment"> <h3>{{comm.username}}</h3><h4>{{comm.comment}}</h4></div>
+            </div>
+            
+            
+        </div>
+
+    </script>
+
+    <script src="/js/vue.js"></script>
+    <script src="/js/axios.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
